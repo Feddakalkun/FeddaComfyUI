@@ -70,6 +70,11 @@ RUN python3 -m pip install --no-cache-dir \
     scipy scikit-image \
     jupyterlab
 
+# --- Re-install CUDA PyTorch (node requirements may have overwritten with CPU version) ---
+RUN python3 -m pip install --no-cache-dir --force-reinstall \
+    torch torchvision torchaudio \
+    --index-url https://download.pytorch.org/whl/cu124
+
 # --- Copy app files ---
 COPY scripts/start.sh /app/scripts/start.sh
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
