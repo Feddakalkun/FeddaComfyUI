@@ -36,7 +36,7 @@ RUN git clone https://github.com/comfyanonymous/ComfyUI.git /app/ComfyUI \
     && cd /app/ComfyUI \
     && pip install --no-cache-dir -r requirements.txt
 
-# --- Clone custom nodes (18 total) ---
+# --- Clone custom nodes (20 total) ---
 RUN mkdir -p /app/custom_nodes && cd /app/custom_nodes \
     && git clone --depth 1 https://github.com/ltdrdata/ComfyUI-Manager.git \
     && git clone --depth 1 https://github.com/Lightricks/ComfyUI-LTXVideo.git \
@@ -55,7 +55,9 @@ RUN mkdir -p /app/custom_nodes && cd /app/custom_nodes \
     && git clone --depth 1 https://github.com/Fannovel16/comfyui_controlnet_aux.git \
     && git clone --depth 1 https://github.com/kijai/ComfyUI-Lotus.git \
     && git clone --depth 1 https://github.com/chflame163/ComfyUI_LayerStyle.git \
-    && git clone --depth 1 https://github.com/theUpsider/ComfyUI-Styles_CSV_Loader.git
+    && git clone --depth 1 https://github.com/theUpsider/ComfyUI-Styles_CSV_Loader.git \
+    && git clone --depth 1 https://github.com/cubiq/ComfyUI_essentials.git \
+    && git clone --depth 1 https://github.com/WASasquatch/was-node-suite-comfyui.git
 
 # --- Install requirements for each custom node ---
 RUN for dir in /app/custom_nodes/*/; do \
