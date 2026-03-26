@@ -1,0 +1,227 @@
+{
+  "8": {
+    "inputs": {
+      "seed": 766710522727898,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "ipndm",
+      "scheduler": "beta",
+      "denoise": 1,
+      "model": [
+        "32",
+        0
+      ],
+      "positive": [
+        "28",
+        0
+      ],
+      "negative": [
+        "28",
+        1
+      ],
+      "latent_image": [
+        "28",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": "a drone shot of the house",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "51",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": "over satturated",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      },
+      "clip": [
+        "51",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Negative Prompt (leave blank cuz 1 CFG)"
+    }
+  },
+  "11": {
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "26",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "16": {
+    "inputs": {
+      "image": "720-E-Rand-Rd-Mount-Prospect-IL-Building-Photo-1-LargeHighDefinition.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Start Frame (Optional)"
+    }
+  },
+  "26": {
+    "inputs": {
+      "ckpt_name": "wan2.2-rapid-mega-aio-v9.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "28": {
+    "inputs": {
+      "width": 1024,
+      "height": 720,
+      "length": [
+        "48",
+        0
+      ],
+      "batch_size": 1,
+      "strength": 1,
+      "positive": [
+        "9",
+        0
+      ],
+      "negative": [
+        "10",
+        0
+      ],
+      "vae": [
+        "26",
+        2
+      ],
+      "control_video": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "WanVaceToVideo",
+    "_meta": {
+      "title": "T2V=Strength 0, I2V=Strength 1"
+    }
+  },
+  "32": {
+    "inputs": {
+      "shift": 8,
+      "model": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "39": {
+    "inputs": {
+      "frame_rate": 16,
+      "loop_count": 0,
+      "filename_prefix": "rapid-mega-out/vid",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "48": {
+    "inputs": {
+      "value": 81
+    },
+    "class_type": "PrimitiveInt",
+    "_meta": {
+      "title": "Number of Frames"
+    }
+  },
+  "51": {
+    "inputs": {
+      "lora_01": "wan22-video8-drone-16-sel-2.safetensors",
+      "strength_01": 1,
+      "lora_02": "None",
+      "strength_02": 0.84,
+      "lora_03": "None",
+      "strength_03": 0.8,
+      "lora_04": "None",
+      "strength_04": 0.93,
+      "model": [
+        "26",
+        0
+      ],
+      "clip": [
+        "26",
+        1
+      ]
+    },
+    "class_type": "Lora Loader Stack (rgthree)",
+    "_meta": {
+      "title": "Lora Loader Stack (rgthree)"
+    }
+  },
+  "53": {
+    "inputs": {
+      "download_links": "",
+      "auto_download": true,
+      "max_concurrent_downloads": 3,
+      "max_download_speed_mbps": 0,
+      "enable_resume": true,
+      "validate_files": false,
+      "enable_notifications": true,
+      "auto_organize": false,
+      "hf_token": "",
+      "speak_and_recognation": {
+        "__value__": [
+          false,
+          true
+        ]
+      }
+    },
+    "class_type": "HuggingFaceDownloader",
+    "_meta": {
+      "title": "🤗 HuggingFace Model Downloader Pro"
+    }
+  }
+}

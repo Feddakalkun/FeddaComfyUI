@@ -10,3 +10,16 @@ runpod_network_volume:
   controlnet: models/controlnet/
   embeddings: models/embeddings/
   upscale_models: models/upscale_models/
+
+workspace_volume:
+  base_path: /workspace
+  checkpoints: models/checkpoints/
+  clip: models/clip/
+  vae: models/vae/
+  loras: models/loras/
+  diffusion_models: models/diffusion_models/
+  text_encoders: models/text_encoders/
+  model_patches: models/model_patches/
+  controlnet: models/controlnet/
+  embeddings: models/embeddings/
+  upscale_models: models/upscale_models/
