@@ -36,7 +36,7 @@ RUN git clone https://github.com/comfyanonymous/ComfyUI.git /app/ComfyUI \
     && cd /app/ComfyUI \
     && pip install --no-cache-dir -r requirements.txt
 
-# --- Clone custom nodes (27 total) ---
+# --- Clone custom nodes (26 total) ---
 RUN mkdir -p /app/custom_nodes && cd /app/custom_nodes \
     && git clone --depth 1 https://github.com/ltdrdata/ComfyUI-Manager.git \
     && git clone --depth 1 https://github.com/Lightricks/ComfyUI-LTXVideo.git \
@@ -63,8 +63,7 @@ RUN mkdir -p /app/custom_nodes && cd /app/custom_nodes \
     && git clone --depth 1 https://github.com/kijai/ComfyUI-segment-anything-2.git \
     && git clone --depth 1 https://github.com/Fannovel16/ComfyUI-Frame-Interpolation.git \
     && git clone --depth 1 https://github.com/SeargeDP/ComfyUI_Searge_LLM.git \
-    && git clone --depth 1 https://github.com/bash-j/mikey_nodes.git \
-    && git clone --depth 1 https://github.com/alexopus/ComfyUI-Image-Saver.git
+    && git clone --depth 1 https://github.com/bash-j/mikey_nodes.git
 
 # --- Install requirements for each custom node ---
 RUN for dir in /app/custom_nodes/*/; do \

@@ -5059,7 +5059,7 @@
     },
     {
       "id": 453,
-      "type": "String Literal",
+      "type": "StringConstant",
       "pos": [
         -410,
         4290
@@ -5083,9 +5083,9 @@
       ],
       "title": "PROMPT",
       "properties": {
-        "cnr_id": "image-saver",
+        "cnr_id": "comfyui-kjnodes",
         "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
-        "Node name for S&R": "String Literal",
+        "Node name for S&R": "StringConstant",
         "ue_properties": {
           "widget_ue_connectable": {
             "string": true
@@ -5106,7 +5106,7 @@
     },
     {
       "id": 496,
-      "type": "String Literal",
+      "type": "StringConstant",
       "pos": [
         -410,
         5870
@@ -5130,9 +5130,9 @@
       ],
       "title": "PROMPT",
       "properties": {
-        "cnr_id": "image-saver",
+        "cnr_id": "comfyui-kjnodes",
         "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
-        "Node name for S&R": "String Literal",
+        "Node name for S&R": "StringConstant",
         "ue_properties": {
           "widget_ue_connectable": {
             "string": true
@@ -6017,7 +6017,7 @@
     },
     {
       "id": 208,
-      "type": "String Literal",
+      "type": "StringConstant",
       "pos": [
         -410,
         2710
@@ -6041,9 +6041,9 @@
       ],
       "title": "PROMPT",
       "properties": {
-        "cnr_id": "image-saver",
+        "cnr_id": "comfyui-kjnodes",
         "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
-        "Node name for S&R": "String Literal",
+        "Node name for S&R": "StringConstant",
         "ue_properties": {
           "widget_ue_connectable": {
             "string": true

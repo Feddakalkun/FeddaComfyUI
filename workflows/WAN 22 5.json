@@ -6924,7 +6924,7 @@
     },
     {
       "id": 476,
-      "type": "String Literal",
+      "type": "StringConstant",
       "pos": [
         -400,
         -540
@@ -6948,9 +6948,9 @@
       ],
       "title": "PROMPT",
       "properties": {
-        "cnr_id": "image-saver",
+        "cnr_id": "comfyui-kjnodes",
         "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
-        "Node name for S&R": "String Literal"
+        "Node name for S&R": "StringConstant"
       },
       "widgets_values": [
         "A DOG RUNNING DOWN THE HILL",

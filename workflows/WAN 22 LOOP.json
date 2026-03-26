@@ -4886,7 +4886,7 @@
     },
     {
       "id": 476,
-      "type": "String Literal",
+      "type": "StringConstant",
       "pos": [
         -370,
         -720
@@ -4910,9 +4910,9 @@
       ],
       "title": "PROMPT",
       "properties": {
-        "cnr_id": "comfy-image-saver",
+        "cnr_id": "comfyui-kjnodes",
         "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
-        "Node name for S&R": "String Literal",
+        "Node name for S&R": "StringConstant",
         "ue_properties": {
           "widget_ue_connectable": {
             "string": true
@@ -8900,7 +8900,7 @@
     },
     {
       "id": 686,
-      "type": "String Literal",
+      "type": "StringConstant",
       "pos": [
         -1760,
         3300
@@ -8924,9 +8924,9 @@
       ],
       "title": "INSTRUCTIONS FOR LLM TO EDIT CAPTION",
       "properties": {
-        "cnr_id": "comfy-image-saver",
+        "cnr_id": "comfyui-kjnodes",
         "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
-        "Node name for S&R": "String Literal"
+        "Node name for S&R": "StringConstant"
       },
       "widgets_values": [
         "add to this prompt a sentence about body movement \"{prompt}\"",
