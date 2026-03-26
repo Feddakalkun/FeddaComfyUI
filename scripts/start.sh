@@ -38,13 +38,13 @@ ln -sf "$VOLUME/output" /app/ComfyUI/output
 rm -rf /app/ComfyUI/input
 ln -sf "$VOLUME/input" /app/ComfyUI/input
 
-# --- 3. Custom nodes: copy from image to workspace on first boot ---
+# --- 3. Custom nodes: sync from image to workspace (copy missing ones) ---
 mkdir -p "$VOLUME/custom_nodes"
 
 for node_dir in /app/custom_nodes/*/; do
     node_name=$(basename "$node_dir")
     if [ ! -d "$VOLUME/custom_nodes/$node_name" ]; then
-        echo "[NODES] Copying $node_name to workspace..."
+        echo "[NODES] NEW: Copying $node_name to workspace..."
         cp -r "$node_dir" "$VOLUME/custom_nodes/"
     fi
 done
